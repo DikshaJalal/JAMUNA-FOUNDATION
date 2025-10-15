@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.hero {
+  background: linear-gradient(135deg, #388e3c, #2e7d32);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: white;
+  color: #2e7d32;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e8f5e9;
+  transform: scale(1.05);
+}
+
+/* ABOUT */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 5%;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 160px;
+  border-radius: 50%;
+  border: 4px solid #4caf50;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+/* EDUCATION */
+#education {
+  background-color: #e8f5e9;
+  padding: 3rem 5%;
+}
+
+.edu-card {
+  background-color: white;
+  border-left: 5px solid #43a047;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* SKILLS */
+#skills {
+  text-align: center;
+  padding: 3rem 5%;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills-grid span {
+  background-color: #c8e6c9;
+  padding: 0.7rem 1rem;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+/* PROJECTS */
+#projects {
+  padding: 3rem 5%;
+  text-align: center;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-left: 5px solid #4caf50;
+}
+
+.project-card h3 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+/* CERTIFICATIONS */
+#certifications {
+  background-color: #e8f5e9;
+  padding: 3rem 5%;
+}
+
+#certifications ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#certifications li {
+  margin-bottom: 0.8rem;
+}
+
+/* RESUME & CONTACT */
+#resume, #contact {
+  text-align: center;
+  padding: 3rem 5%;
+}
+
+#contact a {
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

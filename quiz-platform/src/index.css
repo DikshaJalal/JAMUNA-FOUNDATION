@@ -1,0 +1,3 @@
+/* small global resets */
+html, body { background: #f7f9fc; }
+a { color: inherit; text-decoration: none; }

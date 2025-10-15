@@ -1,0 +1,113 @@
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --accent: #4f46e5; /* indigo */
+  --muted: #6b7280;
+  --success: #10b981;
+}
+
+* { box-sizing: border-box; }
+body, html, #root { height: 100%; margin: 0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color: #111827; }
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  text-align: center;
+  padding: 2rem 1rem 0.5rem;
+}
+.app-header h1 { margin: 0; font-size: 1.8rem; color: var(--accent); }
+.subtitle { margin: 0.4rem 0 1.2rem; color: var(--muted); }
+
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 1.5rem;
+}
+
+/* card */
+.card {
+  width: 100%;
+  max-width: 800px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  padding: 1.4rem;
+}
+
+/* quiz header */
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.progress {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* question */
+.question {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.choices {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.choice {
+  border: 1px solid #e6e9ef;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  background: #fff;
+}
+.choice:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(15,23,42,0.04); }
+.choice.selected { border-color: var(--accent); background: rgba(79,70,229,0.06); }
+
+/* buttons */
+.controls {
+  display:flex;
+  gap:0.6rem;
+  justify-content: flex-end;
+}
+.btn {
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #e6e9ef;
+}
+
+/* result */
+.result {
+  text-align: center;
+  padding: 1rem;
+}
+.result .score {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.small { color: var(--muted) }
+
+/* footer */
+.app-footer { text-align:center; padding: 1rem 0; color: var(--muted); font-size: 0.9rem; }

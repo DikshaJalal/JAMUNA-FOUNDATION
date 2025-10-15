@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Make An Impact — Donation Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="brand">MakeAnImpact</h1>
+      <nav>
+        <button id="open-calculator" class="btn ghost">Donate</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="wrap grid-2">
+      <section class="hero-left">
+        <h2>Small donations. Big changes.</h2>
+        <p class="lead">Use our calculator to see the real-world impact of your gift — and when you're ready, click Donate to record it.</p>
+
+        <div class="stats">
+          <div>
+            <span id="total-amount">₹0</span>
+            <small>Total Donated</small>
+          </div>
+          <div>
+            <span id="total-count">0</span>
+            <small>Donations</small>
+          </div>
+          <div>
+            <span id="last-donation">—</span>
+            <small>Last Donation</small>
+          </div>
+        </div>
+
+        <button id="scroll-to-calc" class="btn primary">Calculate Impact</button>
+      </section>
+
+      <section class="hero-right card">
+        <h3>Why donate with us?</h3>
+        <ul>
+          <li>Transparent tracking</li>
+          <li>Immediate impact estimate</li>
+          <li>Secure and simple</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <canvas id="globalChart" height="120"></canvas>
+    </div>
+  </main>
+
+  <!-- Calculator Modal -->
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-panel card">
+      <button id="close-modal" class="modal-close" title="Close">✕</button>
+      <h2>Donation Impact Calculator</h2>
+
+      <form id="donation-form" class="calc-grid">
+        <label>Amount (₹)
+          <input id="amount" type="number" min="1" placeholder="e.g. 250" required />
+        </label>
+
+        <label>Cause
+          <select id="cause">
+            <option value="food">🍱 Food for Needy</option>
+            <option value="education">🎒 Education Support</option>
+            <option value="health">💊 Healthcare Aid</option>
+          </select>
+        </label>
+
+        <div class="buttons">
+          <button id="calc-btn" class="btn primary" type="button">Calculate</button>
+          <button id="donate-btn" class="btn accent" type="button">Donate Now</button>
+          <button id="reset-btn" class="btn ghost" type="button">Reset</button>
+        </div>
+
+        <div id="result" class="result-box" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Thank you modal -->
+  <div id="thanks" class="modal hidden" aria-hidden="true">
+    <div class="modal-panel card thanks-panel">
+      <h3>Thank you! ❤️</h3>
+      <p id="thanks-msg"></p>
+      <button id="thanks-close" class="btn primary">Close</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>Built for internship • Designed by Diksha Jalal</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
